@@ -1,0 +1,5 @@
+{ "name": "@stormroute/web", "version": "0.1.0", "private": true, "type": "module",
+  "scripts": { "dev": "vite", "build": "tsc -p . && vite build", "preview": "vite preview", "typecheck": "tsc --noEmit -p ." },
+  "dependencies": { "@googlemaps/markerclusterer": "^2.5.3", "@stormroute/shared": "*", "@turf/turf": "^7.1.0", "@vis.gl/react-google-maps": "^1.4.0", "react": "^18.3.1", "react-dom": "^18.3.1" },
+  "devDependencies": { "@types/google.maps": "^3.58.1", "@types/react": "^18.3.12", "@types/react-dom": "^18.3.1", "@vitejs/plugin-react": "^4.3.3", "typescript": "^5.6.3", "vite": "^5.4.10" } }
+

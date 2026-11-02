@@ -1,0 +1,35 @@
+:root{--ink:#1c1b18;--ink-2:#5c594f;--line:#dedad0;--surface:#fff;--surface-2:#f3f1ec;--accent:#1f5fd6;--route:#0f766e;--hail-1:#ffd166;--hail-2:#f4883c;--hail-3:#d7263d}
+*{box-sizing:border-box}html,body,#root{height:100%;margin:0}
+body{font-family:Barlow,system-ui,sans-serif;color:var(--ink);font-size:14px}
+.app{display:grid;grid-template-columns:340px 1fr;height:100%}
+.side{border-right:1px solid var(--line);display:flex;flex-direction:column;overflow:hidden}
+.side header{padding:14px 16px;border-bottom:1px solid var(--line);font-family:"Barlow Semi Condensed";font-size:22px;font-weight:700}
+.side header span{color:var(--accent)}
+.panel{padding:14px 16px;overflow:auto;flex:1}
+h2{font-family:"Barlow Semi Condensed";font-size:18px;margin:0 0 6px}
+h3{font-family:"Barlow Semi Condensed";font-size:14px;color:var(--ink-2);margin:14px 0 6px}
+.sub{color:var(--ink-2);font-size:13px}
+.map{position:relative;overflow:hidden}
+.btn{display:block;width:100%;padding:11px;border:0;border-radius:10px;background:var(--accent);color:#fff;font:inherit;font-weight:700;cursor:pointer;margin-top:10px}
+.btn.quiet{background:var(--surface-2);color:var(--ink)}.btn:disabled{opacity:.45}
+label.f{display:block;font-size:13px;color:var(--ink-2);margin-top:8px}
+input.f,select.f{width:100%;margin-top:4px;padding:8px 10px;border:1.5px solid var(--line);border-radius:8px;font:inherit}
+.check{display:flex;gap:8px;align-items:center;padding:6px 0;font-size:14px}
+.counts{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0}
+.counts span{background:var(--surface-2);border-radius:999px;padding:5px 9px;font-size:12.5px;font-weight:600}
+.stop{display:flex;gap:10px;align-items:center;padding:7px 0;border-bottom:1px solid var(--line)}
+.stop .n{width:22px;height:22px;border-radius:50%;background:var(--route);color:#fff;font-weight:700;font-size:12px;display:grid;place-items:center}
+.stop small{display:block;color:var(--ink-2)}
+.layers{position:absolute;top:12px;left:12px;right:60px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;z-index:2;pointer-events:none}
+.map .gm-style .gm-style-mtc{display:none!important} /* hide Google's Map/Satellite control; our chips live where it would be */
+.layers>*{pointer-events:auto}
+.chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 11px;font:inherit;font-weight:600;cursor:pointer;box-shadow:0 1px 6px rgba(0,0,0,.08)}
+.chip[aria-pressed="false"]{color:var(--ink-2);opacity:.7}.chip:disabled{opacity:.5;cursor:default}
+.draw-tools{display:flex;gap:6px}
+.search{position:relative;width:300px}
+.search input.f{margin:0;background:#fff;box-shadow:0 1px 6px rgba(0,0,0,.08)}
+.search-list{position:absolute;top:100%;left:0;right:0;margin:4px 0 0;padding:4px 0;list-style:none;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,.12);max-height:260px;overflow:auto}
+.search-list li{padding:8px 12px;cursor:pointer;font-size:13px}.search-list li:hover{background:var(--surface-2)}.search-list small{color:var(--ink-2)}
+.photo{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin-bottom:10px;background:var(--surface-2)}
+.skeleton{animation:pulse 1.2s ease-in-out infinite}@keyframes pulse{0%,100%{opacity:.5}50%{opacity:1}}
+pre.csv{font:12px ui-monospace,monospace;background:var(--surface-2);padding:10px;border-radius:8px;max-height:220px;overflow:auto;white-space:pre}

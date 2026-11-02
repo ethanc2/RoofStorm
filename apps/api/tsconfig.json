@@ -1,0 +1,2 @@
+{ "extends": "../../tsconfig.base.json", "compilerOptions": { "outDir": "dist", "types": ["node", "geojson"] }, "include": ["src", "tsup.config.ts"] }
+
